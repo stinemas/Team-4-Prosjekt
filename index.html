@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TeamOppgave</title>
+
+    <!--Style-->
+    <link rel="stylesheet" href="style.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+
+    <!--MODEL-->
+    <script src="model.js"></script>
+
+    <!--JavaScript / JS View`s-->
+    <script src="InteresseView.js"></script>
+    <script src="StudenterView.js"></script>
+    <script src="ProfilView.js"></script>
+
+    <!--JavaScript / JS Controllere-->
+    <script src="StudenterController.js"></script>
+    <script src="InteresseController.js"></script>
+    <script src="ProfilController.js"></script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script>
+      
+      function updateView() {
+        if (model.app.currentPage == 'interesse') updateViewInteressePage();
+        if (model.app.currentPage == 'studenter') updateViewStudenterPage();
+        if (model.app.currentPage == 'profil') updateViewProfilPage();
+      }
+      updateView();
+    </script>
+  </body>
+</html>
+
+
+
+<!-- <div class="dropInfo" class="dropdown">
+  <button class="dropbtn" onclick="dropDownBtn()">Interesse</button>
+
+          / Hvordan lage varsel til interesse/
+  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_notification
+
+</div>
+
+                Erlend Privat Link til senere
+https://www.w3schools.com/js/js_array_methods.asp
+-->
